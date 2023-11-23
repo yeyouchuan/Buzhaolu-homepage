@@ -1,7 +1,7 @@
 // app/api/send/addContact.js
-export const config = {
-  runtime: 'experimental-edge',
-};
+import { NextResponse } from 'next/server';
+
+export const runtime = 'edge';
 
 export default async function handler(req) {
   if (req.method === 'POST') {
@@ -25,18 +25,25 @@ export default async function handler(req) {
       if (response.ok) {
         // 请求成功处理
         const data = await response.json();
-        return new Response(JSON.stringify(data), { status: 200 });
+        return NextResponse.json(
+          {
+            email: data.email,
+            firstName: data.first_name,
+            lastName: data.last_name,
+          },
+          { status: 200 },
+        )
       } else {
         // 请求失败处理
         const errorData = await response.text();
-        return new Response(errorData, { status: response.status });
+        return new NextResponse(errorData, { status: response.status });
       }
     } catch (error) {
       // 捕获错误
-      return new Response(JSON.stringify({ error: error.message }), { status: 500 });
+      return new NextResponse(JSON.stringify({ error: error.message }), { status: 500 });
     }
   } else {
     // 如果不是 POST 请求，返回 405 Method Not Allowed
-    return new Response('Method Not Allowed', { status: 405 });
+    return new NextResponse('Method Not Allowed', { status: 405 });
   }
 }
