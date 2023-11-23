@@ -3,58 +3,58 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'tiejili-regular';
-    src: url('../lib/fonts/TiejiliSC-Regular.ttf') format('truetype');
-  }
-  
-  .welcome {
-    color: #ffffff;
-    -webkit-text-stroke: 1px #fff;
-  }
-  
-  .welcome-1 {
-    -webkit-text-stroke: 1px #fff;
-  }
-  
-  .welcome-2 {
-    -webkit-text-stroke: 1px #f4f4f6;
-  }
-  
-  .welcome-3 {
-    -webkit-text-stroke: 1px #dddfe3;
-  }
-  
-  .welcome-4 {
-    -webkit-text-stroke: 1px #c7c9d1;
-  }
-  
-  .welcome-5 {
-    -webkit-text-stroke: 1px #84899a;
-  }
-  
-  .welcome-6 {
-    -webkit-text-stroke: 1px #6e7487;
-  }
-  
-  .welcome-7 {
-    -webkit-text-stroke: 1px #494e5a;
-  }
-  
-  ::-webkit-scrollbar {
-    width: 20px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #444647;
-    border-radius: 20px;
-    border: 8px solid transparent;
-    background-clip: content-box;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
-  }
+  font-family: 'tiejili-regular';
+  src: url('../lib/fonts/TiejiliSC-Regular.ttf') format('truetype');
+}
+
+.welcome {
+color: #ffffff;
+-webkit-text-stroke: 1px #fff;
+}
+
+.welcome-1 {
+-webkit-text-stroke: 1px #fff;
+}
+
+.welcome-2 {
+-webkit-text-stroke: 1px #f4f4f6;
+}
+
+.welcome-3 {
+-webkit-text-stroke: 1px #dddfe3;
+}
+
+.welcome-4 {
+-webkit-text-stroke: 1px #c7c9d1;
+}
+
+.welcome-5 {
+-webkit-text-stroke: 1px #84899a;
+}
+
+.welcome-6 {
+-webkit-text-stroke: 1px #6e7487;
+}
+
+.welcome-7 {
+-webkit-text-stroke: 1px #494e5a;
+}
+
+::-webkit-scrollbar {
+width: 20px;
+}
+
+::-webkit-scrollbar-track {
+background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #444647;
+border-radius: 20px;
+border: 8px solid transparent;
+background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #a8bbbf;
+}
