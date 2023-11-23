@@ -1,37 +1,42 @@
-// pages/api/addContact.js
-import { Resend } from 'resend';
+// app/api/send/addContact.js
+export const config = {
+  runtime: 'experimental-edge',
+};
 
-export default async function handler(req, res) {
-    if (req.method === 'POST') {
-      try {
-        const { email, firstName, lastName } = req.body;
+export default async function handler(req) {
+  if (req.method === 'POST') {
+    try {
+      const { email, firstName, lastName } = await req.json();
 
-        const resend = new Resend(process.env.RESEND_API_KEY);
-  
-        const response = await fetch('https://api.resend.com/audiences/2efb8219-b177-4619-b8ab-025b82edb5d0/contacts', {
-          method: 'POST',
-          headers: {
-            'Authorization': 'Bearer ${process.env.RESEND_API_KEY}',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            email,
-            first_name: firstName,
-            last_name: lastName,
-            unsubscribed: true // 根据需要设置
-          }),
-        });
-  
-        if (!response.ok) {
-          throw new Error(`Error: ${response.status}`);
-        }
-  
-        res.status(200).json({ message: 'Contact added successfully' });
-      } catch (error) {
-        res.status(500).json({ message: error.message });
+      const response = await fetch('https://api.resend.com/audiences/78261eea-8f8b-4381-83c6-79fa7120f1cf/contacts', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${RESEND_API_KEY}`, // 替换为您的 Resend API 密钥
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          first_name: firstName,
+          last_name: lastName,
+          unsubscribed: true, // 根据需要调整
+        }),
+      });
+
+      if (response.ok) {
+        // 请求成功处理
+        const data = await response.json();
+        return new Response(JSON.stringify(data), { status: 200 });
+      } else {
+        // 请求失败处理
+        const errorData = await response.text();
+        return new Response(errorData, { status: response.status });
       }
-    } else {
-      res.status(405).json({ message: 'Method Not Allowed' });
+    } catch (error) {
+      // 捕获错误
+      return new Response(JSON.stringify({ error: error.message }), { status: 500 });
     }
+  } else {
+    // 如果不是 POST 请求，返回 405 Method Not Allowed
+    return new Response('Method Not Allowed', { status: 405 });
   }
-  
+}
