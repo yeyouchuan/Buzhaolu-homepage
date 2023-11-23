@@ -56,7 +56,7 @@ import {
                 上面的卡片是我对不着陆聚焦的主题的设想，分别是<strong>科技、设计、开发和对活动和事件的一些想法</strong>。
               </Text>
               <Text className="text-black text-[14px] leading-[24px]">
-                如果你有更多的反馈或者单纯想和我们做朋友，请随时回复这封邮件，我会即时回复~
+                如果你有更多的反馈或者单纯想和我们做朋友，请随时回复这封邮件，我会及时回复~
               </Text>
               <Text className="text-black text-[14px] leading-[24px]">
                 顺颂商祺
@@ -66,7 +66,7 @@ import {
               </Text>
               <Hr className="border border-solid border-[#eaeaea] my-[26px] mx-0 w-full" />
               <Text className="text-[#666666] text-[12px] leading-[24px]">
-                你可以随时<Link href='/unsubscribe' className='text-blue-500'>退订</Link>这封邮件。
+                你可以随时<Link href='https://buzhaolu.live/unsubscribe' className='text-blue-500'>退订</Link>这封邮件。
               </Text>
             </Container>
           </Body>

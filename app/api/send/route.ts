@@ -11,7 +11,7 @@ export async function POST() {
       from: '夜游船 <newsletter@yeyouchuan.me>',
       to: ['yeyouchuan@gmail.com'],
       subject: "欢迎订阅不着陆！",
-      react: VercelInviteUserEmail({ username: "Mark" }) as React.ReactElement,
+      react: VercelInviteUserEmail({ username: "小苏" }) as React.ReactElement,
     });
 
     if (error) {

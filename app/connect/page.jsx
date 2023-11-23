@@ -12,7 +12,7 @@ export default function Home() {
     event.preventDefault();
     setMessage(''); // 清除之前的消息
     try {
-      const response = await fetch('/api/send/addContact', {
+      const response = await fetch('./api/addContact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
