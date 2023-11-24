@@ -1120,6 +1120,11 @@ semver@^7.5.3:
   dependencies:
     lru-cache "^6.0.0"
 
+sonner@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/sonner/-/sonner-1.2.3.tgz"
+  integrity sha512-LMr155izOFA8hudzuUVQT0H93VqmcF9ODP475YjjC/4INESYWN1/ioC5SYRG20jmDmwuQDR8ugP7y6ELghT6JQ==
+
 source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.0.2.tgz"

@@ -7,6 +7,13 @@
   src: url('../assets/fonts/TiejiliSC-Regular.ttf') format('truetype');
 }
 
+input[type="email"]:focus {
+  outline: none;
+  border: 1px solid rgb(75 85 99); /* 或者你想要的任何样式 */
+  box-shadow: none;
+}
+
+
 .welcome {
 color: #ffffff;
 -webkit-text-stroke: 1px #fff;

@@ -11,7 +11,8 @@
     "node-fetch": "^3.3.2",
     "react": "latest",
     "react-dom": "latest",
-    "resend": "latest"
+    "resend": "latest",
+    "sonner": "^1.2.3"
   },
   "devDependencies": {
     "@types/node": "20.8.10",
