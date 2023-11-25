@@ -37,7 +37,7 @@ const AddContactAndSendEmail = () => {
   };
 
   return (
-    <div className='px-10 py-8 border border-[#262626] bg-[#141414]/50 rounded-lg flex flex-col'>
+    <div className='px-10 py-8 sm:py-12 flex flex-col max-w-[500px] mx-auto'>
       <h2 className='text-white text-2xl font-bold'>订阅不着陆</h2>
       <p className='my-6 text-gray-200'>如果希望知道不着陆的最新进展，不妨输入邮箱订阅一下，你应该会受到一封欢迎邮件~</p>
       <div className='flex gap-2'>
@@ -46,7 +46,7 @@ const AddContactAndSendEmail = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter email"
-          className='text-gray-300 bg-[#262626] rounded-md border-gray-600 border py-2 px-4 w-72'
+          className='text-gray-300 bg-[#262626] rounded-md border-gray-600 border py-2 px-4 w-44 sm:w-72'
         />
         <button onClick={handleSubmit} className='text-white bg-[#262626] rounded-md border-gray-600 border py-2 px-4'>
           Subscribe

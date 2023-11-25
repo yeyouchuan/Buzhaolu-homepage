@@ -10,7 +10,7 @@ export default function Title() {
 
     return (
         <motion.div
-            className="font-brand text-center text-7xl md:text-[160px] flex flex-col relative select-none mx-auto w-[480px]"
+            className="font-brand text-center text-7xl md:text-[160px] flex flex-col relative select-none mx-auto w-[216px] md:w-[480px] h-48 md:h-96"
             onClick={toggleVisibility}
             key={isVisible ? "visible" : "hidden"}
         >

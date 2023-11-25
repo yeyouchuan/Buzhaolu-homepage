@@ -7,6 +7,15 @@
   src: url('../assets/fonts/TiejiliSC-Regular.ttf') format('truetype');
 }
 
+body {
+  @apply bg-[#000000] text-white;
+  font-family: 'HarmonyOS_Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'HarmonyOS_Sans', sans-serif;
+}
+
+.container {
+  @apply mx-12 lg:mx-24 min-[1180px]:mx-24 xl:max-w-[1120px] my-4 sm:my-12 border border-[#303030];;  
+}
+
 input[type="email"]:focus {
   outline: none;
   border: 1px solid rgb(75 85 99); /* 或者你想要的任何样式 */

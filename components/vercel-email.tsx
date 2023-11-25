@@ -46,7 +46,7 @@ import {
                 欢迎订阅不着陆！
               </Heading>
               <Text className="text-black text-[14px] leading-[24px]">
-                你好 {username},
+                你好{username}:
               </Text>
               <Text className="text-black text-[14px] leading-[24px]">
                 我是不着陆的主理人<strong>夜游船</strong>，很高兴你对不着陆感兴趣。不着陆是我和马克发起的闲聊播客，我们希望能在这里分享我们的热情和兴趣。
@@ -59,7 +59,7 @@ import {
                 如果你有更多的反馈或者单纯想和我们做朋友，请随时回复这封邮件，我会及时回复~
               </Text>
               <Text className="text-black text-[14px] leading-[24px]">
-                顺颂商祺
+                顺颂商祺,
               </Text>
               <Text className="text-black text-[14px] leading-[24px] -mt-4">
                 夜游船
