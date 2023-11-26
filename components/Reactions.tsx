@@ -40,6 +40,15 @@ const moodToReactions = [
 ]
 
 export function BlogReactions({ _id, reactions }) {
+  React.useEffect(() => {
+    async function fetchReactions() {
+      const res = await fetch(`/api/reactions?id=${_id}`);
+      const data = await res.json();
+      setCachedReactions(data);
+    }
+  
+    fetchReactions();
+  }, [_id]);  
   const [cachedReactions, setCachedReactions] = React.useState(
     reactions ?? [0, 0, 0, 0, 0, 0]
   )
