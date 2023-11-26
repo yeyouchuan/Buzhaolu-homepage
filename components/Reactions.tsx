@@ -39,7 +39,7 @@ const moodToReactions = [
     },
 ]
 
-export function BlogReactions({ _id, mood, reactions }) {
+export function BlogReactions({ _id, reactions }) {
   const [cachedReactions, setCachedReactions] = React.useState(
     reactions ?? [0, 0, 0, 0, 0, 0]
   )
@@ -70,7 +70,7 @@ export function BlogReactions({ _id, mood, reactions }) {
 
   return (
     <motion.div
-      className="pointer-events-auto flex flex-col w-32 h-[600px] max-h-[600px] items-center justify-center gap-12 px-1 pb-8 pt-4 border-l border-[#303030] backdrop-blur-lg"
+      className="pointer-events-auto flex flex-row md:flex-col w-full md:w-32 md:h-[600px] max-h-[600px] items-center justify-center gap-6 md:gap-12 px-1 pb-8 pt-4 border-l border-[#303030] backdrop-blur-lg"
       onMouseMove={onMouseMove}
       onMouseLeave={() => mouseY.set(Infinity)}
       initial={{
@@ -144,7 +144,7 @@ function ReactIcon({
       <Image
         src={image}
         alt=""
-        className="inline-block scale-150"
+        className="inline-block md:scale-150"
         priority
         fetchPriority="high"
         fill

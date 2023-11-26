@@ -11,7 +11,7 @@ export default function Index() {
                 <div className='border-b border-[#303030] w-full h-[400px] md:h-[600px] pt-28'>
                     <Title /> 
                 </div>
-                <div className='flex flex-col md:flex-row justify-between items-center'>
+                <div className='flex flex-col md:flex-row justify-between items-center shrink-0 pb-6 md:pb-0'>
                     <AddContactButton />
                     <BlogReactions />
                 </div>

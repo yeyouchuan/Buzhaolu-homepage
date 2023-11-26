@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
 
   const value = await redis.get<number[]>(`reactions:${id}`)
   if (!value) {
-    await redis.set(getKey(id), [0, 0, 0, 0])
+    await redis.set(getKey(id), [0, 0, 0, 0, 0, 0])
   }
 
   const { success } = await ratelimit.limit(getKey(id) + `_${req.ip ?? ''}`)
@@ -33,14 +33,14 @@ export async function GET(req: NextRequest) {
     })
   }
 
-  return NextResponse.json(value ?? [0, 0, 0, 0])
+  return NextResponse.json(value ?? [0, 0, 0, 0, 0, 0])
 }
 
 export async function PATCH(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const id = searchParams.get('id')
   const index = searchParams.get('index')
-  if (!id || !index || !(parseInt(index) >= 0 && parseInt(index) < 4)) {
+  if (!id || !index || !(parseInt(index) >= 0 && parseInt(index) < 6)) {
     return new Response('Missing id or index', { status: 400 })
   }
 
@@ -55,7 +55,7 @@ export async function PATCH(req: NextRequest) {
 
   let current = await redis.get<number[]>(key)
   if (!current) {
-    current = [0, 0, 0, 0]
+    current = [0, 0, 0, 0, 0, 0]
   }
   // increment the array value at the index
   current[parseInt(index)] += 1
