@@ -70,26 +70,9 @@ export function BlogReactions({ _id, reactions }) {
 
   return (
     <motion.div
-      className="pointer-events-auto flex flex-row md:flex-col w-full md:w-32 md:h-[600px] max-h-[600px] items-center justify-center gap-6 md:gap-12 px-1 pb-8 pt-4 border-l border-[#303030] backdrop-blur-lg"
+      className="pointer-events-auto md:flex flex-row md:flex-col w-full md:w-32 md:h-[600px] max-h-[600px] items-center justify-center gap-6 md:gap-12 px-1 pb-8 pt-4 md:border-l border-[#303030] backdrop-blur-lg hidden shrink-0"
       onMouseMove={onMouseMove}
       onMouseLeave={() => mouseY.set(Infinity)}
-      initial={{
-        opacity: 0,
-        y: 8,
-        rotateY: 90,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        rotateY: 0,
-      }}
-      transition={{
-        delay: 0.5,
-        duration: 0.55,
-        type: 'spring',
-        damping: 15,
-        stiffness: 180,
-      }}
     >
       {moodToReactions.map((image, idx) => (
         <ReactIcon
