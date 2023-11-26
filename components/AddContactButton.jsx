@@ -32,7 +32,19 @@ const AddContactAndSendEmail = () => {
       });
       
       setEmail('');
+
+      return NextResponse.json(
+        {
+          message: 'success',
+          sendEmailResponse,
+          addContactResponse,
+        },
+        {
+          status: 201,
+        }
+      )
     } catch (error) {
+      return NextResponse.json({ error }, { status: 400 })
     }
   };
 
