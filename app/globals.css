@@ -22,6 +22,10 @@ input[type="email"]:focus {
   box-shadow: none;
 }
 
+.codebg {
+  background-color: rgb(0, 0, 0);
+  background-image: radial-gradient(at 6% 95%, rgb(251, 146, 60) 0, transparent 23%), radial-gradient(at 18% 78%, rgb(253, 224, 71) 0, transparent 34%), radial-gradient(at 33% 46%, rgb(74, 222, 128) 0, transparent 63%), radial-gradient(at 64% 44%, rgb(147, 197, 253) 0, transparent 47%), radial-gradient(at 75% 29%, rgb(14, 116, 144) 0, transparent 45%), radial-gradient(at 97% 8%, rgb(168, 85, 247) 0, transparent 74%), radial-gradient(at 15% 8%, rgb(67, 56, 202) 0, transparent 88%), radial-gradient(at 78% 83%, rgb(250, 204, 21) 0, transparent 100%);
+}
 
 .welcome {
 color: #ffffff;
