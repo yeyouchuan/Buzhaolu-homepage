@@ -3,13 +3,15 @@
 import { useState } from 'react';
 
 export default function Circle() {
-  const [gradientVisible, setGradientVisible] = useState(true);
-  const [maskPosition, setMaskPosition] = useState({ x: 10, y: 10 });
+  const [gradientVisible, setGradientVisible] = useState(false);
+  const [maskPosition, setMaskPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
+
+    setGradientVisible(true);
 
     // 设置边缘阈值，比如20px
     const edgeThreshold = 20;
