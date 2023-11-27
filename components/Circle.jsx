@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function Circle() {
   const [gradientVisible, setGradientVisible] = useState(true);
-  const [maskPosition, setMaskPosition] = useState({ x: 0, y: 0 });
+  const [maskPosition, setMaskPosition] = useState({ x: 10, y: 10 });
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
