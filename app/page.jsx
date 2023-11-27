@@ -17,8 +17,6 @@ export default function Index() {
                 </div>
                 <div className='flex flex-col md:flex-row justify-between items-center shrink-0 border-t border-[#303030]'>
                     <Circle />
-                    <Circle />
-                    <Circle />
                 </div>
             </div>
         </main>
