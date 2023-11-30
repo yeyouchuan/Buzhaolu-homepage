@@ -1,17 +1,24 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Circle() {
   const [gradientVisible, setGradientVisible] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ x: 0, y: 0 });
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const { width, height } = containerRef.current.getBoundingClientRect();
+      setMaskPosition({ x: width / 2, y: height / 2 }); // 设置为容器中心的坐标
+      setGradientVisible(true);
+    }
+  }, []);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-
-    setGradientVisible(true);
 
     // 设置边缘阈值，比如20px
     const edgeThreshold = 20;
@@ -27,7 +34,8 @@ export default function Circle() {
 
   return (
     <div
-      className="relative w-96 h-96 bg-black overflow-hidden rounded-3xl"
+      ref={containerRef}
+      className="relative w-full h-[600px] bg-black overflow-hidden rounded-3xl"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setGradientVisible(false)} // 鼠标离开时渐变消失
     >
@@ -46,13 +54,16 @@ export default function Circle() {
         <div
           className="absolute top-0 left-0 w-full h-full"
           style={{
-            background: 'radial-gradient(circle at ' + maskPosition.x + 'px ' + maskPosition.y + 'px, transparent 100px, rgba(0, 0, 0, 1) 250px)',
+            background: 'radial-gradient(circle at ' + maskPosition.x + 'px ' + maskPosition.y + 'px, transparent 200px, rgba(0, 0, 0, 1) 250px)',
           }}
         />
       )}
 
       {/* 中间的黑色固定圆圈 */}
-      <div className="absolute left-1/2 top-1/2 w-60 h-60 blur-lg bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-black/90 to-black/0 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute left-1/2 top-1/2 w-96 h-96 blur-lg bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-black via-black/90 to-black/0 rounded-full transform -translate-x-1/2 -translate-y-1/2">
+        
+      </div>
+      <p className='text-black font-brand text-8xl absolute left-1/2 top-1/2 w-96 h-96 text-center transform -translate-x-1/2 -mt-10 welcome-2'>DEV</p>
     </div>
   );
 }
@@ -60,8 +71,8 @@ export default function Circle() {
 // 生成一个足以覆盖整个容器的随机字符串
 function generateRandomString() {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  const charsPerRow = 50; // 根据实际容器宽度和字体大小调整
-  const rows = 20; // 根据实际容器高度和字体大小调整
+  const charsPerRow = 250; // 根据实际容器宽度和字体大小调整
+  const rows = 40; // 根据实际容器高度和字体大小调整
   let string = '';
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < charsPerRow; j++) {
