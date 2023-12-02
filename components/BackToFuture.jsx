@@ -1,7 +1,7 @@
 export default function BackToFuture(props) {
   return (
     <svg viewBox="0 0 898 255" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_82_2)">
+      <g clipPath="url(#clip0_82_2)">
       <mask id="mask0_82_2" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="897" height="255">
       <rect width="897" height="255" fill="url(#paint0_linear_82_2)"/>
       </mask>
@@ -161,12 +161,12 @@ export default function BackToFuture(props) {
       </g>
       <defs>
       <linearGradient id="paint0_linear_82_2" x1="-2.67321e-08" y1="128" x2="897" y2="128" gradientUnits="userSpaceOnUse">
-      <stop stop-color="white"/>
-      <stop offset="1" stop-opacity="0"/>
+      <stop stopColor="white"/>
+      <stop offset="1" stopOpacity="0"/>
       </linearGradient>
       <linearGradient id="paint1_linear_82_2" x1="56.213" y1="132.844" x2="1029.3" y2="137.364" gradientUnits="userSpaceOnUse">
       <stop/>
-      <stop offset="1" stop-opacity="0.5"/>
+      <stop offset="1" stopOpacity="0.5"/>
       </linearGradient>
       <clipPath id="clip0_82_2">
       <rect width="898" height="255" fill="white"/>
