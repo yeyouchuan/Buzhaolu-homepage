@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Head from 'next/head'
+
+import { SpeedInsights } from "@vercel/speed-insights/next"
  
 // These styles apply to every route in the application
 import './globals.css'
@@ -16,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }

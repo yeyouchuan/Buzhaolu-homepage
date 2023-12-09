@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react'
 import Xiaoyuzhou from './Xiaoyuzhou'
 import Apple from './Apple'
 import Spotify from './Spotify'
+import Wechat from './Wechat'
 
 export default function platform() {
 
@@ -110,7 +111,23 @@ export default function platform() {
                             <Spotify />
                         </div>
                     </div>
-                    <div className='aspect-square border-b border-[#303030]'></div>
+                    <div className='aspect-square border-b border-[#303030]'>
+                        <div 
+                            className='w-full h-full blur-sm hover:blur-none duration-700 scale-75'
+                            onMouseEnter={() => {
+                                if (window.innerWidth >= 768) {
+                                    setHoveredText({ text: '微信', colorClass: 'text-[#00C70A]' });
+                                }
+                            }}
+                            onMouseLeave={() => {
+                                if (window.innerWidth >= 768) {
+                                    setHoveredText({ text: '各种平台', colorClass: 'text-white' });
+                                }
+                            }}
+                        >
+                            <Wechat />
+                        </div>
+                    </div>
                     <div className='aspect-square border-r border-[#303030]'></div>
                     <div className='aspect-square border-r border-[#303030]'></div>
                     <div className='aspect-square border-r border-[#303030]'></div>
