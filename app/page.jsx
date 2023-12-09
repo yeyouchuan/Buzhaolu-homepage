@@ -7,7 +7,7 @@ import AddContactButton from '../components/AddContactButton';
 import BackToFuture from '../components/BackToFuture';
 import Cross from '../components/Cross';
 import HomepageDivider from '../components/HomepageDivider';
-import Platform from '../components/Platform/platform';
+import platform from '../components/platform/platform';
 
 export default function Index() {
 
@@ -33,7 +33,7 @@ export default function Index() {
                     </div>
                 </div>
                 <HomepageDivider />
-                <Platform />
+                <platform />
                 <div className='grid grid-cols-1 md:grid-cols-3 items-center shrink-0 border-b border-[#303030]'>
                     <div className='h-full w-full border-r border-[#303030]'></div>
                     <div className='h-full w-full border-r border-[#303030]'></div>
