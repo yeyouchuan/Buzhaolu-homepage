@@ -13,6 +13,17 @@ module.exports = {
       fontFamily: {
         'brand': ['tiejili-regular', 'sans-serif']
       },
+      animation: {
+        'star': 'pulse 0.5s cubic-bezier(0.6, 0.2, 0.4, 1) 2',
+      },
+      colors: {
+        'green-brand': '#5c7f71',
+        'red-brand': '#802520',
+        'yellow-brand': '#ba8530',
+        'black-brand': '#181818',
+        'white-brand': '#f5eddc',
+        'orange-brand': '#b2653b',
+      },
     },
   },
   plugins: [],

@@ -11,7 +11,7 @@ import Apple from './Apple'
 import Spotify from './Spotify'
 import Wechat from './Wechat'
 
-export default function platform() {
+export default function Platform() {
 
     const [hoveredText, setHoveredText] = useState({ text: '各种平台', colorClass: 'text-white' });
     const textClass = `inline-flex mx-1 ${hoveredText.colorClass}`;
@@ -39,7 +39,7 @@ export default function platform() {
     return (
         <div className='w-full h-fit grid grid-cols-4 md:grid-cols-6 items-center shrink-0 border-b border-[#303030]'>
                     <div className='col-span-4 md:col-span-2 h-full border-r border-b border-[#303030] p-10 md:p-6 lg:p-8 xl:p-12'>
-                        <div className='flex flex-row md:flex-col text-xl md:text-2xl lg:text-2xl xl:text-3xl font-bold gap-0 md:gap-3 items-center'>
+                        <div className='flex flex-row md:flex-col text-xl md:text-2xl lg:text-2xl xl:text-3xl font-bold gap-0 md:gap-3 items-center justify-center text-white'>
                             <motion.p 
                                 className='w-fit md:w-full text-left'
                             >
@@ -62,7 +62,7 @@ export default function platform() {
                     </div>
                     <div className='aspect-square border-r border-b border-[#303030]'>
                         <div 
-                            className='w-full h-full blur-sm hover:blur-none duration-700 scale-75'
+                            className='w-full h-full hover:animate-star duration-700 scale-75'
                             onMouseEnter={() => {
                                 if (window.innerWidth >= 768) {
                                     setHoveredText({ text: '小宇宙', colorClass: 'bg-gradient-to-r bg-clip-text text-transparent from-[#32B3DE] to-[#6BBED3]' });
@@ -79,7 +79,7 @@ export default function platform() {
                     </div>
                     <div className='aspect-square border-r border-b border-[#303030]'>
                         <div 
-                            className='w-full h-full blur-sm hover:blur-none duration-700 scale-75'
+                            className='w-full h-full hover:animate-star duration-700 scale-75'
                             onMouseEnter={() => {
                                 if (window.innerWidth >= 768) {
                                     setHoveredText({ text: 'Apple Podcast', colorClass: 'bg-gradient-to-r bg-clip-text text-transparent from-[#F452FF] to-[#832BC1]' });
@@ -96,7 +96,7 @@ export default function platform() {
                     </div>
                     <div className='aspect-square border-r border-b border-[#303030]'>
                         <div 
-                            className='w-full h-full blur-sm hover:blur-none duration-700 scale-75'
+                            className='w-full h-full hover:animate-star duration-700 scale-75'
                             onMouseEnter={() => {
                                 if (window.innerWidth >= 768) {
                                     setHoveredText({ text: 'Spotify', colorClass: 'text-[#9691F9]' });
@@ -113,7 +113,7 @@ export default function platform() {
                     </div>
                     <div className='aspect-square border-b border-[#303030]'>
                         <div 
-                            className='w-full h-full blur-sm hover:blur-none duration-700 scale-75'
+                            className='w-full h-full hover:animate-star duration-700 scale-75'
                             onMouseEnter={() => {
                                 if (window.innerWidth >= 768) {
                                     setHoveredText({ text: '微信', colorClass: 'text-[#00C70A]' });
