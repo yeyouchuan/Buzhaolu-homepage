@@ -24,7 +24,20 @@ export default function Index() {
                     <div 
                         className='h-fit w-full border-r border-[#303030] p-10 md:p-12'
                     >
-                        <p className='text-[#A1A1A1] text-base md:text-xl tracking-widest leading-loose'><p className='text-gray-200 inline-flex'>不着陆</p>是一个多媒介、泛领域的杂谈媒体。我们关注<p className='text-gray-200 inline-flex'>商业</p>和<p className='text-gray-200 inline-flex'>科技</p>的历史和现状，也希望邀请优秀的<p className='text-gray-200 inline-flex'>设计师</p>和<p className='text-gray-200 inline-flex'>开发者</p>来分享他们宝贵的创作经验。</p>
+                        <div className='text-[#A1A1A1] text-base md:text-xl tracking-widest leading-loose'>
+                            <span className='inline-flex font-brand text-red-brand text-[20px]'>
+                                不着陆
+                            </span>
+                            是一个多媒介、泛领域的杂谈媒体。我们希望邀请优秀的
+                            <span className='text-orange-brand font-medium mx-1 items-baseline'>
+                                设计师
+                            </span>
+                            和
+                            <span className='font-pixel-zh ml-1 text-green-brand items-baseline'>
+                                开发者
+                            </span>
+                            来分享他们宝贵的创作经验。
+                        </div>
                     </div>
                     <div className='h-full w-full relative'>
                         <div className='bottomCrosscontainer'>
@@ -48,10 +61,7 @@ export default function Index() {
                     </div>
                 </div>
                 <HomepageDivider />
-                <div className='flex flex-col md:flex-row justify-between items-center shrink-0'>
-                    <AddContactButton />
-                    <BlogReactions />
-                </div>
+                <AddContactButton />
             </div>
         </main>
     );

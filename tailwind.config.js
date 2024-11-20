@@ -11,7 +11,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'brand': ['tiejili-regular', 'sans-serif']
+        'brand': ['tiejili-regular', 'sans-serif'],
+        'pixel-zh': ['fusion-pixel-zh', 'sans-serif'],
+        'smileysans': ['smileysans', 'sans-serif'],
       },
       animation: {
         'star': 'pulse 0.5s cubic-bezier(0.6, 0.2, 0.4, 1) 2',

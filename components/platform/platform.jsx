@@ -10,11 +10,12 @@ import Xiaoyuzhou from './Xiaoyuzhou'
 import Apple from './Apple'
 import Spotify from './Spotify'
 import Wechat from './Wechat'
+import Bilibili from './Bilibili'
 
 export default function Platform() {
 
     const [hoveredText, setHoveredText] = useState({ text: '各种平台', colorClass: 'text-white' });
-    const textClass = `inline-flex mx-1 ${hoveredText.colorClass}`;
+    const textClass = `inline-flex ml-2 font-smileysans text-4xl ${hoveredText.colorClass}`;
 
     useEffect(() => {
         const handleResize = () => {
@@ -128,7 +129,23 @@ export default function Platform() {
                             <Wechat />
                         </div>
                     </div>
-                    <div className='aspect-square border-r border-[#303030]'></div>
+                    <div className='aspect-square border-r border-[#303030]'>
+                        <div 
+                            className='w-full h-full hover:animate-star duration-700 scale-75'
+                            onMouseEnter={() => {
+                                if (window.innerWidth >= 768) {
+                                    setHoveredText({ text: 'Bilibili', colorClass: 'text-[#F16C8D]' });
+                                }
+                            }}
+                            onMouseLeave={() => {
+                                if (window.innerWidth >= 768) {
+                                    setHoveredText({ text: '各种平台', colorClass: 'text-white' });
+                                }
+                            }}
+                        >
+                            <Bilibili />
+                        </div>
+                    </div>
                     <div className='aspect-square border-r border-[#303030]'></div>
                     <div className='aspect-square border-r border-[#303030]'></div>
                     <div className='aspect-square bottom-0 md:border-r border-[#303030] hidden md:inline-block'></div>
