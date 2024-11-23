@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: 'tiejili-regular';
-  src: url('../assets/fonts/TiejiliSC-Regular.ttf') format('truetype');
+  src: url('../public/fonts/TiejiliSC-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'fusion-pixel-zh';
-  src: url('../assets/fonts/fusion-pixel-10px-monospaced-zh_hans.ttf') format('truetype');
+  src: url('../public/fonts/fusion-pixel-10px-monospaced-zh_hans.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'smileysans';
-  src: url('../assets/fonts/SmileySans-Oblique.ttf') format('truetype');
+  src: url('../public/fonts/SmileySans-Oblique.ttf') format('truetype');
 }
 
 body {
